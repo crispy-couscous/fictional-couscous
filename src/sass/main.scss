@@ -10,8 +10,7 @@
 }
 
 .bannerHeader {
-  border: 2px solid black;
-  border-bottom: 5px solid red;
+  border-bottom: 2px solid #B3B3B3;
   width:100%;
   height:120px;
   position:relative;
@@ -57,10 +56,13 @@
 .imageHeader{
 }
 .imageHeader img{
+  margin-top:20px;
   height:20%;
   min-height:180px;
   max-height:270px;
   width:100%;
+  // filter: grayscale(1);
+  //  -webkit-filter: grayscale(1);
 }
 
 .nsl{
@@ -126,6 +128,8 @@
   margin-right:0px;
   margin-left:5px;
   text-align: center;
+  // filter: grayscale(1);
+  //  -webkit-filter: grayscale(1);
 
   border:1px solid grey;
 }
@@ -166,5 +170,7 @@
       border: 3px solid orange;
       img{
           margin-bottom:50px;
+          // filter: grayscale(1);
+          //  -webkit-filter: grayscale(1);
       }
 }
