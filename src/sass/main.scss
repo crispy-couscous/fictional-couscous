@@ -76,12 +76,21 @@
 
   -webkit-flex: 1 0 0;
    flex: 1 0 0;
-
+  overflow: hidden;
+  // text-overflow: ellipsis;
   margin:20px;
   margin-left:0px;
   margin-right:10px;
   text-align: center;
   border:1px solid grey;
+  p {
+  display: -webkit-box;
+  height: 8.6em;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  text-overflow: -o-ellipsis-lastline;
+
+  }
 }
 
 .specials{
