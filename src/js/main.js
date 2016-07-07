@@ -70,14 +70,11 @@ var foodPictures = $.ajax({
     method: "flickr.photos.search",
     format: "json",
     nojsoncallback: "1",
-    tags: "couscous",
+    tags: "Mediterranean food",
     per_page: "5",
     api_key: flickrToken
   }
 }).then(function(data){
-  console.log(data);
   var foodItem = data.photos.photo.map(createFlickrTmpl);
-  console.log(foodItem);
-  console.log(foodNode);
   foodNode.append(foodItem);
 });
