@@ -2,6 +2,12 @@ import $ from 'jquery';
 import {flickrToken} from './credentials.js';
 var foodNode = $(".foodPics");
 
+function newsTmpl(data) {
+  var template = `
+      ${data.title}`
+  $('.newsContent').html(template)
+}
+
 var menu = $.ajax({
   url: 'https://json-data.herokuapp.com/restaurant/menu/1'
 }).then(function(response) {
@@ -11,9 +17,16 @@ var menu = $.ajax({
 var news = $.ajax({
   url: 'https://json-data.herokuapp.com/restaurant/news/1'
 }).then(function(response) {
-  console.log(response);
-})
-
+  console.log(response.title);
+  var template = `
+        <div class="newsTitle">
+          ${response.title} ${response.date_published}
+        </div>
+        <div class="newsPost">
+          <p>${response.post}</p>
+        </div>`
+  $('.newsContent').append(template)
+});
 
 function createFlickrTmpl(foodItem) {
   var item = foodItem;
