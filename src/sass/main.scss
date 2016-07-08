@@ -121,6 +121,7 @@ $mainBorderColor: #B3B3B3;
   background-color: $nslBGColor;
   border:1px solid $mainBorderColor;
   p {
+    font-size:.8em;
   display: -webkit-box;
   height: 8.6em;
   -webkit-line-clamp: 9;
@@ -128,6 +129,7 @@ $mainBorderColor: #B3B3B3;
   text-overflow: -o-ellipsis-lastline;
   }
 }
+
 
 .specials{
   -webkit-box-sizing: border-box;
@@ -230,8 +232,12 @@ ul.tabHeader {
     padding-bottom:10px;
     li{
       padding:10px 30px;
-    }
+        }
+        a{
+          color:black;
+        }
   }
+
 
 .tabStoryBody{}
 
@@ -248,13 +254,23 @@ ul.tabHeader {
 
 .notCurrent{
   overflow:hidden;
-width:0px;
-height:0px;
-// transition: height .75s ease-in-out;
+  width:0px;
+  height:0px;
+}
+
+.currentTab{
+  border-bottom: 2px solid white;
+  border-left: 2px solid $mainBorderColor;
+  border-right: 2px solid $mainBorderColor;
+  border-top: 2px solid $mainBorderColor;
+}
+
+.notCurrentTab{
+  border-bottom: 1px solid $mainBorderColor;
 }
 
 .menuListingHeader{
-  border-bottom: 1px solid $mainBorderColor;
+  // border-bottom: 1px solid $mainBorderColor;
 }
 
 .foodBody{
@@ -319,11 +335,70 @@ height:0px;
   color: #9d9d9d;
   font-size: 10px;
 }
+
+.newsTitle{
+  padding-top:5px;
+    font-size:1em;
+}
+
 .newsDate {
+  font-weight: normal;
+  font-size:1em;
   float: right;
 }
 
+.specialPic{
+  text-align: center;
+}
+
 .specialPic img {
-  width: 300px;
-  height: 100px;
+    margin-top:10px;
+    height:120px;
+    width:70%;
+    // clear:both;
+  // width: 300px;
+  // height: 100px;
+}
+
+.specialTitle{
+  padding-top:5px;
+  font-weight: bold;
+  font-size:.8em;
+  // padding-top:25px;
+  border-bottom: 1px dotted $mainBorderColor;
+  margin-bottom:10px;
+
+}
+
+.specialPrice{
+  font-weight: normal;
+  font-size:.7em;
+  float:right;
+}
+
+.specialDescription{
+  overflow: hidden;
+  font-size:.8em;
+}
+
+//Hover over rules
+.iconDesc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+
+
+  visibility: hidden;
+  opacity: 0;
+
+}
+
+
+.entypo-alert:hover .iconDesc {
+  visibility: visible;
+  opacity: 1;
 }
