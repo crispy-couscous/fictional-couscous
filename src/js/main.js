@@ -11,36 +11,34 @@ function newsTmpl(data) {
 function appetizersTmpl (data) {
   var template =`
   <div class="foodTitle">${data.item}<span class="foodPrice">${data.price}</span></div>
-  ${data.description}
+  <div class="foodBody"><div class="foodDescription">${data.description}</div>
   <div class="entreeInfo">
-
   <span class="entypo-alert"></span><span class="entypo-star"></span>
   <span class="entypo-flash"></span><span class="entypo-vimeo-circled"></span>
-  </div>`
+  </div></div></div>`
+
   $('.appetizers').append(template)
 };
 
 function entreesTmpl (data) {
   var template =`
   <div class="foodTitle">${data.item}<span class="foodPrice">${data.price}</span></div>
-  ${data.description}
+  <div class="foodBody"><div class="foodDescription">${data.description}</div>
   <div class="entreeInfo">
-
   <span class="entypo-alert"></span><span class="entypo-star"></span>
   <span class="entypo-flash"></span><span class="entypo-vimeo-circled"></span>
-  </div>`
+  </div></div></div>`
   $('.entrees').append(template)
 };
 
 function sidesTmpl (data) {
   var template =`
   <div class="foodTitle">${data.item}<span class="foodPrice">${data.price}</span></div>
-  ${data.description}
+  <div class="foodBody"><div class="foodDescription">${data.description}</div>
   <div class="entreeInfo">
-
   <span class="entypo-alert"></span><span class="entypo-star"></span>
   <span class="entypo-flash"></span><span class="entypo-vimeo-circled"></span>
-  </div>`
+  </div></div></div>`
   $('.sides').append(template)
 };
 
