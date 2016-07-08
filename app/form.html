@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crispy Couscous</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--  This goes back into index.html-->
+    <div class="reservations">
+        <form class="resForm">
+            <div class="resFormBody">
+                <!--  This goes back into reservations.js-->
+                <div class="fullNameInfo">
+                    <div class="formLabel"><label for="fullName">Full Name</label></div>
+                    <div class="fullNameInput"><input type="text" id="fullName" name="user_name"></div>
+                </div>
+                <div class="numGuestsInfo">
+                    <div class="formLabel"><label for="numGuests">Number of Guests</label></div>
+                    <div class="guestInput"><input type="text" id="numGuests" name="num_Guests" /></div>
+                </div>
+                <div class="dateResInfo">
+                    <div class="formLabel"><label for="dateRes">Date</label></div>
+                    <div class="dateInput"><input type="date" value="" placeholder="" id="dateRes" name="date_res" /></div>
+                </div>
+                <div class="emailInfo">
+                    <div class="formLabel"><label for="mail">E-mail</label></div>
+                    <div class="emailInput"><input type="email" id="mail" name="user_mail" /></div>
+                </div>
+                <div class="messageInfo">
+                    <div class="formLabel"><label for="msg">Message</label></div>
+                    <div class="messageInput"><textarea id="msg" name="user_message"></textarea>
+                </div>
+                <div class="seatPrefInfo">
+                    <div class="formLabel"><label for="seatPref">Seating Preference</label></div>
+                    <div class="seatInput"><select id="seatPref" name="seat_pref" />
+                      <option value = "indoor">Indoor</option>
+                      <option value = "outdoor">Outdoor</option>
+                    </select></div>
+                </div>
+                <!--  This goes back into index.html-->
+            </div>
+            <div class="resFormFooter">
+                <button class="formButton">Reserve Table</button>
+            </div>
+    </div>
+
+
+</body>
+
+</html>
