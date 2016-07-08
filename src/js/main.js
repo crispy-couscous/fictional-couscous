@@ -45,7 +45,7 @@ function sidesTmpl (data) {
 var menu = $.ajax({
   url: 'https://json-data.herokuapp.com/restaurant/menu/1'
 }).then(function(response) {
-  console.log(response);
+  // console.log(response);
   response.appetizers.forEach(appetizersTmpl)
   response.entrees.forEach(entreesTmpl)
   response.sides.forEach(sidesTmpl)
@@ -54,10 +54,10 @@ var menu = $.ajax({
 var news = $.ajax({
   url: 'https://json-data.herokuapp.com/restaurant/news/1'
 }).then(function(response) {
-  console.log(response.title);
+  // console.log(response.title);
   var template = `
         <div class="newsTitle">
-          ${response.title} ${response.date_published}
+          ${response.title} <span class="newsDate">${response.date_published}</span>
         </div>
         <div class="newsPost">
           <p>${response.post}</p>
@@ -119,6 +119,35 @@ var foodPictures = $.ajax({
   var foodItem = data.photos.photo.map(createFlickrTmpl);
   foodNode.append(foodItem);
 });
+
+function specialTmpl(item){
+  var special = item[0]
+  var template = `
+  <div class="specialPic"><img src="http://cdn4.themediterraneandish.com/wp-content/uploads/2016/02/Spicy-Couscous-Recipe-with-Shrimp-and-Chorizo-10.jpg"></div>
+  <div class="specialTitle">${special.item} <span class="specialPrice">${special.price}</span></div>
+  <div class="specialDescription">${special.description}</div>
+  `
+  $('.specials').append(template)
+}
+
+function specialItem(menuId) {
+  console.log(menuId)
+  $.ajax({
+    url: 'https://json-data.herokuapp.com/restaurant/menu/1'
+  }).then(function(response) {
+    console.log(response.entrees)
+    var menuItem = response.entrees.filter(function(entree){
+      return entree.id === menuId;
+    })
+    specialTmpl(menuItem)
+  })
+}
+
+$.ajax({
+  url: `https://json-data.herokuapp.com/restaurant/special/1`
+}).then(function(response) {
+  specialItem(response.menu_item_id)
+})
 
 // Tab listener below here
 var runCurrent = function (event) {
