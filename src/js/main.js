@@ -36,7 +36,7 @@ function sidesTmpl (data) {
   <div class="foodTitle">${data.item}<span class="foodPrice">${data.price}</span></div>
   <div class="foodBody"><div class="foodDescription">${data.description}</div>
   <div class="entreeInfo">
-  <span class="entypo-alert"></span><span class="entypo-star"></span>
+  <span class="entypo-alert"><span class="entypo-star"></span>
   <span class="entypo-flash"></span><span class="entypo-vimeo-circled"></span>
   </div></div></div>`
   $('.sides').append(template)
@@ -54,7 +54,6 @@ var menu = $.ajax({
 var news = $.ajax({
   url: 'https://json-data.herokuapp.com/restaurant/news/1'
 }).then(function(response) {
-  // console.log(response.title);
   var template = `
         <div class="newsTitle">
           ${response.title} <span class="newsDate">${response.date_published}</span>
@@ -98,7 +97,6 @@ $('#tabStory').on("click", function(event) {
 // $('#servation').on("click", function(event) {
 //   event.preventDefault();
 // })
-
 
 function createFlickrTmpl(foodItem) {
   var item = foodItem;
@@ -161,6 +159,14 @@ var runCurrent = function (event) {
     $(".tabStoryBody").removeClass( "notCurrent" );
     $(".tabMenuBody").addClass( "notCurrent" );
     $(".tabReservationBody").addClass( "notCurrent" );
+
+    $(".tabStory").addClass( "currentTab" );
+    $(".tabMenu").removeClass( "currentTab" );
+    $(".tabReservation").removeClass( "currentTab" );
+
+    $(".tabStory").removeClass( "notCurrentTab" );
+    $(".tabMenu").addClass( "notCurrentTab" );
+    $(".tabReservation").addClass( "notCurrentTab" );
   }
   else if (tab === "tabMenu"){
     $(".tabStoryBody").removeClass( "current" );
@@ -170,6 +176,14 @@ var runCurrent = function (event) {
     $(".tabStoryBody").addClass( "notCurrent" );
     $(".tabMenuBody").removeClass( "notCurrent" );
     $(".tabReservationBody").addClass( "notCurrent" );
+
+    $(".tabStory").removeClass( "currentTab" );
+    $(".tabMenu").addClass( "currentTab" );
+    $(".tabReservation").removeClass( "currentTab" );
+
+    $(".tabStory").addClass( "notCurrentTab" );
+    $(".tabMenu").removeClass( "notCurrentTab" );
+    $(".tabReservation").addClass( "notCurrentTab" );
   }
   else if (tab === "tabReservation"){
     $(".tabStoryBody").removeClass( "current" );
@@ -179,6 +193,14 @@ var runCurrent = function (event) {
     $(".tabStoryBody").addClass( "notCurrent" );
     $(".tabMenuBody").addClass( "notCurrent" );
     $(".tabReservationBody").removeClass( "notCurrent" );
+
+    $(".tabStory").removeClass( "currentTab" );
+    $(".tabMenu").removeClass( "currentTab" );
+    $(".tabReservation").addClass( "currentTab" );
+
+    $(".tabStory").addClass( "notCurrentTab" );
+    $(".tabMenu").addClass( "notCurrentTab" );
+    $(".tabReservation").removeClass( "notCurrentTab" );
   };
 };
 
