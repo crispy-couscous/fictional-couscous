@@ -89,15 +89,15 @@ $('#tabStory').on("click", function(event) {
       Sea Legs black spot. Grog grapple crack Jennys tea cup squiffy hornswaggle bounty quarter
       parrel. Warp red ensign snow salmagundi Jolly Roger wench Shiver me timbers loot.</p>
     </div>`
-    $('.tabContent').html(template)
+    // $('.tabContent').html(template)
 })
-$('#tabMenu').on("click", function(event) {
-  event.preventDefault();
-  $('tabContent').html(menu)
-})
-$('#tabReservation').on("click", function(event) {
-  event.preventDefault();
-})
+// $('#tabMenu').on("click", function(event) {
+//   event.preventDefault();
+//   $('tabContent').html(menu)
+// })
+// $('#servation').on("click", function(event) {
+//   event.preventDefault();
+// })
 
 
 function createFlickrTmpl(foodItem) {
@@ -148,3 +148,38 @@ $.ajax({
 }).then(function(response) {
   specialItem(response.menu_item_id)
 })
+
+// Tab listener below here
+var runCurrent = function (event) {
+  var tab = event.target.id;
+
+  if (tab === "tabStory"){
+    $(".tabStoryBody").addClass( "current" );
+    $(".tabMenuBody").removeClass( "current" );
+    $(".tabReservationBody").removeClass( "current" );
+
+    $(".tabStoryBody").removeClass( "notCurrent" );
+    $(".tabMenuBody").addClass( "notCurrent" );
+    $(".tabReservationBody").addClass( "notCurrent" );
+  }
+  else if (tab === "tabMenu"){
+    $(".tabStoryBody").removeClass( "current" );
+    $(".tabMenuBody").addClass( "current" );
+    $(".tabReservationBody").removeClass( "current" );
+
+    $(".tabStoryBody").addClass( "notCurrent" );
+    $(".tabMenuBody").removeClass( "notCurrent" );
+    $(".tabReservationBody").addClass( "notCurrent" );
+  }
+  else if (tab === "tabReservation"){
+    $(".tabStoryBody").removeClass( "current" );
+    $(".tabMenuBody").removeClass( "current" );
+    $(".tabReservationBody").addClass( "current" );
+
+    $(".tabStoryBody").addClass( "notCurrent" );
+    $(".tabMenuBody").addClass( "notCurrent" );
+    $(".tabReservationBody").removeClass( "notCurrent" );
+  };
+};
+
+$(".tabHeader").on('click', runCurrent);
