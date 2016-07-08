@@ -20,9 +20,14 @@ $mainBorderColor: #B3B3B3;
 }
 
 .logo img{
-  position:absolute;
-        top: 10%;
-        left:0%;
+  height:90%;
+  margin:0;
+  padding:0;
+  padding-left:10px;
+  padding-top:5px;
+  // position:absolute;
+  //       top: 0%;
+  //       left:0%;
   //Needs some width management based on actual logo
   // width:30%;
 }
@@ -103,7 +108,7 @@ $mainBorderColor: #B3B3B3;
   margin:20px;
   margin-left:0px;
   margin-right:10px;
-  padding:20px 20px;
+  padding:10px 10px;
   text-align: left;
   background-color: $nslBGColor;
   border:1px solid $mainBorderColor;
@@ -126,7 +131,7 @@ $mainBorderColor: #B3B3B3;
   margin:20px;
   margin-left:5px;
   margin-right:5px;
-  padding:20px 20px;
+  padding:10px 10px;
   text-align: left;
   background-color: $nslBGColor;
   border:1px solid $mainBorderColor;
@@ -141,7 +146,7 @@ $mainBorderColor: #B3B3B3;
      margin:20px;
   margin-right:0px;
   margin-left:5px;
-  padding:20px 20px;
+  padding:10px 10px;
   text-align: center;
   background-color: $nslBGColor;
   border:1px solid $mainBorderColor;
@@ -153,6 +158,26 @@ $mainBorderColor: #B3B3B3;
     font-weight: 200;
     border-bottom: 1px solid $mainBorderColor;
   }
+  iframe{
+    margin-top:10px;
+    height:120px;
+    width:80%;
+    clear:both;
+  }
+}
+
+.locationAddress{
+  margin-top:10px;
+  font-size:14px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.locationContact{
+  margin-top:10px;
+  font-size:12px;
+  font-weight: 100;
+  text-align: center;
 }
 
 .mainContent{
