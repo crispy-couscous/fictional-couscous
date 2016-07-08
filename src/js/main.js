@@ -36,7 +36,7 @@ function sidesTmpl (data) {
   <div class="foodTitle">${data.item}<span class="foodPrice">${data.price}</span></div>
   <div class="foodBody"><div class="foodDescription">${data.description}</div>
   <div class="entreeInfo">
-  <span class="entypo-alert"></span><span class="entypo-star"></span>
+  <span class="entypo-alert"><span class="entypo-star"></span>
   <span class="entypo-flash"></span><span class="entypo-vimeo-circled"></span>
   </div></div></div>`
   $('.sides').append(template)
@@ -54,7 +54,6 @@ var menu = $.ajax({
 var news = $.ajax({
   url: 'https://json-data.herokuapp.com/restaurant/news/1'
 }).then(function(response) {
-  // console.log(response.title);
   var template = `
         <div class="newsTitle">
           ${response.title} <span class="newsDate">${response.date_published}</span>
