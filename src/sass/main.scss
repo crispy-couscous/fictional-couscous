@@ -2,9 +2,13 @@ $nslBGColor: #EBEBEB;
 $mainBorderColor: #B3B3B3;
 
 @import url(http://weloveiconfonts.com/api/?family=brandico);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
 
 [class*="brandico-"]:before {
   font-family: 'brandico', sans-serif;
+}
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
 }
 
 .container {
@@ -18,7 +22,17 @@ $mainBorderColor: #B3B3B3;
   height:120px;
   position:relative;
 }
-
+.entreeInfo {
+  display: inline;
+}
+.foodPrice {
+  float: right;
+  font-size: 12px;
+}
+.foodTitle{
+  font-size: 18px;
+  font-weight: bold;
+}
 .logo img{
   height:90%;
   margin:0;
@@ -74,7 +88,7 @@ $mainBorderColor: #B3B3B3;
 }
 
 .nsl{
-  border:2px solid blue;
+  // border:2px solid blue;
   height:280px;
   width:100%;
 
@@ -115,7 +129,7 @@ $mainBorderColor: #B3B3B3;
   p {
   display: -webkit-box;
   height: 8.6em;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
   text-overflow: -o-ellipsis-lastline;
   }
@@ -178,6 +192,10 @@ $mainBorderColor: #B3B3B3;
   font-size:12px;
   font-weight: 100;
   text-align: center;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .mainContent{
