@@ -215,7 +215,6 @@ $mainBorderColor: #B3B3B3;
 .tabs{
   -webkit-flex: 3 0 0;
    flex: 3 0 0;
-   height:500px;
    margin:10px;
    li {
     list-style: none;
@@ -225,6 +224,50 @@ $mainBorderColor: #B3B3B3;
     }
    }
 }
+
+.menuListingHeader{
+  border-bottom: 1px solid $mainBorderColor;
+}
+
+.foodBody{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width:100%;
+}
+
+.foodTitle{
+  padding-top:25px;
+  border-bottom: 1px dotted $mainBorderColor;
+  margin-bottom:10px;
+}
+
+.foodDescription{
+  border-right:1px solid $mainBorderColor;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-right:5px;
+  -webkit-flex: 6 0 0;
+   flex: 6 0 0;
+}
+
+.entreeInfo{
+  display: -webkit-flex;
+  display: flex;
+  // align-self: flex-end;
+  justify-content: flex-end;
+
+  min-width:75px;
+  padding-top:10px;
+  -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+   span{
+     padding-left:2px;
+     padding-right:2px;
+   }
+}
+
 
 .foodPics{
   -webkit-flex: 1 0 0;
