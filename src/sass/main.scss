@@ -230,8 +230,12 @@ ul.tabHeader {
     padding-bottom:10px;
     li{
       padding:10px 30px;
-    }
+        }
+        a{
+          color:black;
+        }
   }
+
 
 .tabStoryBody{}
 
@@ -248,13 +252,23 @@ ul.tabHeader {
 
 .notCurrent{
   overflow:hidden;
-width:0px;
-height:0px;
-// transition: height .75s ease-in-out;
+  width:0px;
+  height:0px;
+}
+
+.currentTab{
+  border-bottom: 2px solid white;
+  border-left: 2px solid $mainBorderColor;
+  border-right: 2px solid $mainBorderColor;
+  border-top: 2px solid $mainBorderColor;
+}
+
+.notCurrentTab{
+  border-bottom: 1px solid $mainBorderColor;
 }
 
 .menuListingHeader{
-  border-bottom: 1px solid $mainBorderColor;
+  // border-bottom: 1px solid $mainBorderColor;
 }
 
 .foodBody{

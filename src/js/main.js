@@ -99,7 +99,6 @@ $('#tabStory').on("click", function(event) {
 //   event.preventDefault();
 // })
 
-
 function createFlickrTmpl(foodItem) {
   var item = foodItem;
   return `<img class="food-pic" src="https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg">`;
@@ -161,6 +160,14 @@ var runCurrent = function (event) {
     $(".tabStoryBody").removeClass( "notCurrent" );
     $(".tabMenuBody").addClass( "notCurrent" );
     $(".tabReservationBody").addClass( "notCurrent" );
+
+    $(".tabStory").addClass( "currentTab" );
+    $(".tabMenu").removeClass( "currentTab" );
+    $(".tabReservation").removeClass( "currentTab" );
+
+    $(".tabStory").removeClass( "notCurrentTab" );
+    $(".tabMenu").addClass( "notCurrentTab" );
+    $(".tabReservation").addClass( "notCurrentTab" );
   }
   else if (tab === "tabMenu"){
     $(".tabStoryBody").removeClass( "current" );
@@ -170,6 +177,14 @@ var runCurrent = function (event) {
     $(".tabStoryBody").addClass( "notCurrent" );
     $(".tabMenuBody").removeClass( "notCurrent" );
     $(".tabReservationBody").addClass( "notCurrent" );
+
+    $(".tabStory").removeClass( "currentTab" );
+    $(".tabMenu").addClass( "currentTab" );
+    $(".tabReservation").removeClass( "currentTab" );
+
+    $(".tabStory").addClass( "notCurrentTab" );
+    $(".tabMenu").removeClass( "notCurrentTab" );
+    $(".tabReservation").addClass( "notCurrentTab" );
   }
   else if (tab === "tabReservation"){
     $(".tabStoryBody").removeClass( "current" );
@@ -179,6 +194,14 @@ var runCurrent = function (event) {
     $(".tabStoryBody").addClass( "notCurrent" );
     $(".tabMenuBody").addClass( "notCurrent" );
     $(".tabReservationBody").removeClass( "notCurrent" );
+
+    $(".tabStory").removeClass( "currentTab" );
+    $(".tabMenu").removeClass( "currentTab" );
+    $(".tabReservation").addClass( "currentTab" );
+
+    $(".tabStory").addClass( "notCurrentTab" );
+    $(".tabMenu").addClass( "notCurrentTab" );
+    $(".tabReservation").removeClass( "notCurrentTab" );
   };
 };
 
