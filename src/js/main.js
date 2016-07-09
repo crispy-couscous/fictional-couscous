@@ -157,7 +157,6 @@ var runCurrent = function(event) {
         $(".tabMenu").removeClass("notCurrentTab");
         $(".tabReservation").addClass("notCurrentTab");
     } else if (tab === "tabReservation") {
-
         $(".tabStoryBody").removeClass("current");
         $(".tabMenuBody").removeClass("current");
         $(".tabReservationBody").addClass("current");
