@@ -1,22 +1,17 @@
 import $ from "jquery";
 
 var node = $(".resFormBody");
-var resData = "";
 
-function formTemplate(reserve){
-  return
-}
+function confirmationMsg(){
+  return`<span class="Thanks"><h3>Thank you for your reservation!
+  We look forward to having you dine with us!</h3></span>`
+};
 
-function confirmScreen(data){
-  return
-}
+function confirmScreen(data) {
+    event.preventDefault();
+    $(".resFormBody").html(confirmationMsg)
+    $(".resFormFooter").hide();
+    return
+};
 
-$('#tabReservation').on("click", function(event) {
-  formTemplate(data);
-  resData = $('tabReservation').html()
-  node.append
-  event.preventDefault();
-})
-
-$('.formButton').on("click", function(event) {
-  confirmScreen(data);
+export {confirmScreen};
