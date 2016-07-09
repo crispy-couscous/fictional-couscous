@@ -53,9 +53,10 @@
 
             <div class="tabs">
                 <ul class="tabHeader">
-                    <li id="tab1" class="tabStory currentTab"><a href="#" title="" id="tabStory">Story</a></li>
-                    <li id="tab2" class="tabMenu notCurrentTab"><a href="#" title="" id="tabMenu">Menu</a></li>
-                    <li id="tab3" class="tabReservation notCurrentTab"><a href="#" title="" id="tabReservation">Reservation</a></li>
+                    <li id="tab1" class="tabStory currentTab"><a href="#tabStory" title="" id="tabStory">Story</a></li>
+                    <li id="tab2" class="tabMenu notCurrentTab"><a href="#tabMenu" title="" id="tabMenu">Menu</a></li>
+                    <li id="tab3" class="tabReservation notCurrentTab"><a href="#tabReservations" title="" id="tabReservation">Reservation</a></li>
+                    <li id="tab4" class="tabReviews notCurrentTab"><a href="#tabReviews" title="" id="tabReviews">Reviews</a></li>
                 </ul>
                 <div class="tabStoryBody current">
                     <p>Couscous, the most popular dish from Morocco and North Africa, is now appreciated worldwide. Historians have different opinions as to the origin of couscous.
@@ -87,7 +88,7 @@
                     </div>
                 </div>
                 <div class="tabReservationBody notCurrent">
-                    <form class="resForm" id="resvForm">
+                    <form class="resForm">
                         <div class="resFormBody">
                             <div class="fullNameInfo">
                                 <div class="formLabel">
@@ -137,8 +138,31 @@
                             <button class="formButton">Reserve Table</button>
                         </div>
                 </div>
-            </div>
+                <div class="tabReviewsBody notCurrent">
+                  <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
 
+        s.src = '//crispycouscousreviews.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+</div>
             <div class="foodPics">
                 <h3>Food photos...</h3>
             </div>
@@ -149,6 +173,7 @@
         </div>
     </div>
     <script src="js/bundle.js"></script>
+    <script id="dsq-count-scr" src="//crispycouscousreviews.disqus.com/count.js" async></script>
 </body>
 
 </html>

@@ -128,50 +128,85 @@ var runCurrent = function(event) {
         $(".tabStoryBody").addClass("current");
         $(".tabMenuBody").removeClass("current");
         $(".tabReservationBody").removeClass("current");
+        $(".tabReviewsBody").removeClass("current");
 
         $(".tabStoryBody").removeClass("notCurrent");
         $(".tabMenuBody").addClass("notCurrent");
         $(".tabReservationBody").addClass("notCurrent");
+        $(".tabReviewsBody").addClass("notCurrent");
 
         $(".tabStory").addClass("currentTab");
         $(".tabMenu").removeClass("currentTab");
         $(".tabReservation").removeClass("currentTab");
+        $(".tabReviews").removeClass("currentTab");
 
         $(".tabStory").removeClass("notCurrentTab");
         $(".tabMenu").addClass("notCurrentTab");
         $(".tabReservation").addClass("notCurrentTab");
+        $(".tabReviews").addClass("notCurrentTab");
+
     } else if (tab === "tabMenu") {
         $(".tabStoryBody").removeClass("current");
         $(".tabMenuBody").addClass("current");
         $(".tabReservationBody").removeClass("current");
+        $(".tabReviewsBody").removeClass("current");
 
         $(".tabStoryBody").addClass("notCurrent");
         $(".tabMenuBody").removeClass("notCurrent");
         $(".tabReservationBody").addClass("notCurrent");
+        $(".tabReviewsBody").addClass("notCurrent");
 
         $(".tabStory").removeClass("currentTab");
         $(".tabMenu").addClass("currentTab");
         $(".tabReservation").removeClass("currentTab");
+        $(".tabReviews").removeClass("currentTab");
 
         $(".tabStory").addClass("notCurrentTab");
         $(".tabMenu").removeClass("notCurrentTab");
         $(".tabReservation").addClass("notCurrentTab");
+        $(".tabReviews").addClass("notCurrentTab");
+
     } else if (tab === "tabReservation") {
         $(".tabStoryBody").removeClass("current");
         $(".tabMenuBody").removeClass("current");
         $(".tabReservationBody").addClass("current");
+        $(".tabReviewsBody").removeClass("current");
 
         $(".tabStoryBody").addClass("notCurrent");
         $(".tabMenuBody").addClass("notCurrent");
         $(".tabReservationBody").removeClass("notCurrent");
+        $(".tabReviewsBody").addClass("notCurrent");
 
         $(".tabStory").removeClass("currentTab");
         $(".tabMenu").removeClass("currentTab");
         $(".tabReservation").addClass("currentTab");
+        $(".tabReviews").removeClass("currentTab");
 
         $(".tabStory").addClass("notCurrentTab");
         $(".tabMenu").addClass("notCurrentTab");
         $(".tabReservation").removeClass("notCurrentTab");
+        $(".tabReviews").addClass("notCurrentTab");
+
+    } else if (tab === "tabReviews") {
+          $(".tabStoryBody").removeClass("current");
+          $(".tabMenuBody").removeClass("current");
+          $(".tabReservationBody").removeClass("current");
+          $(".tabReviewsBody").addClass("current");
+
+          $(".tabStoryBody").addClass("notCurrent");
+          $(".tabMenuBody").addClass("notCurrent");
+          $(".tabReservationBody").addClass("notCurrent");
+          $(".tabReviewsBody").removeClass("notCurrent");
+
+          $(".tabStory").removeClass("currentTab");
+          $(".tabMenu").removeClass("currentTab");
+          $(".tabReservation").removeClass("currentTab");
+          $(".tabReviews").addClass("currentTab");
+
+          $(".tabStory").addClass("notCurrentTab");
+          $(".tabMenu").addClass("notCurrentTab");
+          $(".tabReservation").addClass("notCurrentTab");
+          $(".tabReviews").removeClass("notCurrentTab");
     };
 };
 
