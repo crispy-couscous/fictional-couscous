@@ -239,11 +239,17 @@ ul.tabHeader {
   }
 
 
-.tabStoryBody{}
+.tabStoryBody {}
 
 .tabMenuBody{}
 
-.tabReservationBody{}
+.tabReservationBody{
+}
+
+.resFormBody{
+  padding-top:10px;
+  padding-left:10px;
+}
 
 .current{
   overflow:hidden;

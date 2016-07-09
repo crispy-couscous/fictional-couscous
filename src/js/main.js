@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import {flickrToken} from './credentials.js';
+import {resData, confirmScreen, populateForm, blankForm} from './reservation.js';
+
 var foodNode = $(".foodPics");
 
 function newsTmpl(data) {
@@ -163,6 +165,7 @@ var runCurrent = function (event) {
     $(".tabReservation").addClass( "notCurrentTab" );
   }
   else if (tab === "tabReservation"){
+
     $(".tabStoryBody").removeClass( "current" );
     $(".tabMenuBody").removeClass( "current" );
     $(".tabReservationBody").addClass( "current" );
@@ -178,7 +181,15 @@ var runCurrent = function (event) {
     $(".tabStory").addClass( "notCurrentTab" );
     $(".tabMenu").addClass( "notCurrentTab" );
     $(".tabReservation").removeClass( "notCurrentTab" );
+
+    function populateForm(blankForm){
+      $(".resFormBody").append(blankForm);
+    };
   };
 };
 
 $(".tabHeader").on('click', runCurrent);
+
+$('.formButton').on("click", function(event) {
+            confirmScreen(event)
+          });
