@@ -14,7 +14,7 @@ The primary purposes of this exercise were to:
 
 4. Improve skills in responsive design. (Many elements of this project display degrees of responsive design.  However those limits are pushed once the display is reduced to mobile/phone dimensions.)
 
-This project has been deployed to Surge at: XXXXXXXXXXX
+This project has been deployed to Surge at: https://tiy-niclaswillems-fictional-couscous.surge.sh
 
 If you'd like to check out more of our team member's individual work, please visit our respective GitHub pages at:
 
