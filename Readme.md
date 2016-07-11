@@ -19,9 +19,11 @@ This project has been deployed to Surge at: XXXXXXXXXXX
 If you'd like to check out more of our team member's individual work, please visit our respective GitHub pages at:
 
 Niclas Willems: https://github.com/MrAceman
+
 Joshua Rivers: https://github.com/R1V3R5
 
 If you have any questions please email us:
 
 [Niclas Willems](mailto:niclas.willems@gmail.com)
+
 [Joshua Rivers](mailto:joshua.rivers@gmail.com)
