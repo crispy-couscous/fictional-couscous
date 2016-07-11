@@ -1,5 +1,8 @@
 $nslBGColor: #EBEBEB;
 $mainBorderColor: #B3B3B3;
+$popupRight: 10px;
+$popupTop: 25px;
+$popupMinWidth: 200px;
 @import url(http://weloveiconfonts.com/api/?family=brandico);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 [class*="brandico-"]:before {
@@ -13,7 +16,7 @@ img {
     // -webkit-filter: grayscale(1);
 }
 .container {
-    margin-left:12vw;
+    margin-left: 12vw;
     width: 75vw;
     min-width: 400px;
 }
@@ -202,7 +205,7 @@ ul.tabHeader {
     }
 }
 .tabStoryBody {
-  line-height: 1.6;
+    line-height: 1.6;
 }
 .tabMenuBody {}
 .tabReservationBody {}
@@ -248,6 +251,96 @@ ul.tabHeader {
     border-bottom: 1px solid $mainBorderColor;
 }
 .menuListingHeader {}
+//*********************************
+/* The icon needed to position the dropdown content */
+.entypo-flash {
+    position: relative;
+    display: inline-block;
+}
+.entypo-star {
+    position: relative;
+    display: inline-block;
+}
+.entypo-alert {
+    position: relative;
+    display: inline-block;
+}
+.entypo-vimeo-circled {
+    position: relative;
+    display: inline-block;
+}
+/* Popup Content (Hidden by Default) */
+.popupTitle {
+    // font-size: 50px;
+    display: block;
+    font-weight: bold;
+    border-bottom: 1px solid $mainBorderColor;
+    padding-bottom: 2px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.popupContent {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.popupAllergy {
+    display: none;
+    position: absolute;
+    right: $popupRight;
+    top: $popupTop;
+    background-color: $nslBGColor;
+    min-width: $popupMinWidth;
+}
+.popupFav {
+    display: none;
+    position: absolute;
+    right: $popupRight;
+    top: $popupTop;
+    background-color: $nslBGColor;
+    min-width: $popupMinWidth;
+}
+.popupSpicy {
+    display: none;
+    position: absolute;
+    right: $popupRight;
+    top: $popupTop;
+    background-color: $nslBGColor;
+    min-width: $popupMinWidth;
+}
+.popupVegan {
+    display: none;
+    position: absolute;
+    right: $popupRight;
+    top: $popupTop;
+    background-color: $nslBGColor;
+    min-width: $popupMinWidth;
+}
+/* Show the popup menu on hover */
+.entypo-flash:hover .popupSpicy {
+    display: inline-block;
+    z-index: 10;
+    border: 2px solid $mainBorderColor;
+}
+.entypo-star:hover .popupFav {
+    display: inline-block;
+    z-index: 10;
+    border: 2px solid $mainBorderColor;
+}
+.entypo-alert:hover .popupAllergy {
+    display: inline-block;
+    z-index: 10;
+    border: 2px solid $mainBorderColor;
+}
+.entypo-vimeo-circled:hover .popupVegan {
+    display: inline-block;
+    z-index: 10;
+    border: 2px solid $mainBorderColor;
+}
+//*********************************
 .foodBody {
     display: -webkit-flex;
     display: flex;
