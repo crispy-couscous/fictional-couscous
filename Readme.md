@@ -1,55 +1,27 @@
-# Installation
+## Team Project - Fictional Restaurant Website Weekend Project
 
-#### Prerequisites
+This HTML, CSS, and JS was created during the weekend of July 7th through July 10th, 2016.  
 
-Make sure you have an up to date installation of `npm`
-with `brew update` followed by either `brew install npm` or `brew upgrade npm`.
+The goal of this project was to use a mockup and assorted JSON information, both provided and available via APIs, to recreate a one page website for a fictional restaurant.
 
-Then use npm to install the following apps with `npm install -g $APP_NAME`
-* `gulp-cli`
-* `surge`
+The primary purposes of this exercise were to:
 
-Finally, I would strongly encourage you to install the `newapp` script from [here][newapp].
+1. Gain experience working as a small team on a project from beginning to finish.  This included gathering and understanding client requirements, preliminary design collaboration, workflow management, code integration, and deployment.
 
-[newapp]: https://gist.github.com/kingcons/a25733c233faf10847cbb4ff557e6843
+2. Gain experience collaborating on a Github project, including managing and resolving merge conflicts.
 
-# Usage
+3. Technical skills included HTML and CSS layout to ensure styling according to client requirements and use of Javascript functionality and AJAX calls to pull and manipulate dynamic data.  JSON data provided via basic JSON objects and from 3rd party APIs (Google & Flickr).  Integration of 3rd party scripts (Disqus) for review functionality.
 
-#### If you are using the `newapp` tool
+4. Improve skills in responsive design. (Many elements of this project display degrees of responsive design.  However those limits are pushed once the display is reduced to mobile/phone dimensions.)
 
-*NOTE:* If you do not use a lowercased project/folder name, the automatic deploy to surge with `npm run deploy` will fail as surge.sh always expects lowercased names.
+This project has been deployed to Surge at: XXXXXXXXXXX
 
-1. Run `$ newapp template <project name>`
-2. Change in to your new project
-3. Initialize Git `$ git init`
-4. Build
+If you'd like to check out more of our team member's individual work, please visit our respective GitHub pages at:
 
-#### If you are NOT using the `newapp` tool
+Niclas Willems: https://github.com/MrAceman
+Joshua Rivers: https://github.com/R1V3R5
 
-1. Clone down this repo
-2. Rename and change into the project folder
-3. Remove `git` from it `$ rm -rf .git`
-4. Initialize Git `$ git init`
-5. Install the dependencies `$ npm install`
-6. Build 
+If you have any questions please email us:
 
-
-# Features
-
-This template features a couple different tools. First it utalizes both NPM and Gulp for different tasks.
-
-## Gulp Tasks
-
-All tasks are listed below, but ideally you will just need to run `gulp start` and be done with it.
-
-- `gulp start`: This is the primary task that will fire up the server and allow you to start building
-- `gulp server`: This will start a Browsersync server with live-reload
-- `gulp sass`: This will compile your SASS
-- `gulp browserify`: This will transpile your JS from ES6 to ES5
-- `gulp watch`: This will start a watcher for files
-
-## NPM Scripts
-
-- `npm run test`: This will launch Mocha in your terminal and run any tests
-- `npm run deploy`: This will deploy your application to Surge.sh for you
-- `npm run lint`: This will run ESLint on your `/src/js` folder
+[Niclas Willems](mailto:niclas.willems@gmail.com)
+[Joshua Rivers](mailto:joshua.rivers@gmail.com)
